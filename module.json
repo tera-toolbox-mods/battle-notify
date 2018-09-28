@@ -1,3 +1,4 @@
 {
-	"servers": ["https://raw.githubusercontent.com/hackerman-caali/battle-notify/master/"]
+    "disableAutoUpdate": false,
+	"servers": ["https://raw.githubusercontent.com/caali-hackerman/battle-notify/master/"]
 }
