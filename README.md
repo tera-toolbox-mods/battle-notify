@@ -3,7 +3,7 @@ This software in this repository does not work in combination with the NA versio
 
 # battle-notify
 
-A [tera-proxy](https://github.com/hackerman-caali/tera-proxy) module to show text notifications on configurable in-game events.
+A [tera-proxy](https://github.com/caali-hackerman/tera-proxy) module to show text notifications on configurable in-game events.
 
 ## Preview
 
