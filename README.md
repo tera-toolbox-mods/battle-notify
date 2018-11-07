@@ -1,6 +1,7 @@
 # battle-notify
 
 A [tera-proxy](https://github.com/caali-hackerman/tera-proxy) module to show text notifications on configurable in-game events.
+Original mod by wuaw (https://github.com/wuaw/battle-notify).
 
 ## Preview
 
