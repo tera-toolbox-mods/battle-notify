@@ -1,6 +1,3 @@
-### NOTICE REGARDING ENMASSE ENTERTAINMENT (NA) TERA
-This software in this repository does not work in combination with the NA version of TERA hosted by EME (neither PC, nor PS4/XB1 servers). It contains no intellectual property belonging to them.
-
 # battle-notify
 
 A [tera-proxy](https://github.com/caali-hackerman/tera-proxy) module to show text notifications on configurable in-game events.
