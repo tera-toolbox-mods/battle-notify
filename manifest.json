@@ -5,7 +5,7 @@
         "lib/abnormal.js": "a5e9cf73b2cfd9ff5ea54e80c0ae189f352b3520692a2a177a3e96b0bf373e4a",
         "lib/cooldown.js": "cb15e1e771d3c940579c3c341f60a3036ee217ac0e941805bfc24d1d9e061c98",
         "lib/entity.js": "cd2f74c89052421a7419fa2f1255fe1c6817f306f2c7cd45256d9ce8c61f1753",
-        "lib/notify.js": "3ef8da1947c8607a7abd44f5a689a055d82a3305751b7e7e8fea968ba34dccd1",
+        "lib/notify.js": "85d2ec7f8b0fe350f5023b579bc662783700f8fa6c3d52c5d25178734f5684f9",
         "lib/party.js": "ff28e64cfe387a10e4fe461a46156153a7139cc5f11303502f93bc828284f493",
         "config/archer.js": {"overwrite": false, "hash": "21f3a5eb77fb52cad654a6fc778a5decd314de3fac3ebc612b1ddfce9f2246ca"},
         "config/berserker.js": {"overwrite": false, "hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
