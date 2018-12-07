@@ -7,7 +7,7 @@
         "lib/entity.js": "cd2f74c89052421a7419fa2f1255fe1c6817f306f2c7cd45256d9ce8c61f1753",
         "lib/notify.js": "85d2ec7f8b0fe350f5023b579bc662783700f8fa6c3d52c5d25178734f5684f9",
         "lib/party.js": "ff28e64cfe387a10e4fe461a46156153a7139cc5f11303502f93bc828284f493",
-        "config/archer.js": {"overwrite": false, "hash": "21f3a5eb77fb52cad654a6fc778a5decd314de3fac3ebc612b1ddfce9f2246ca"},
+        "config/archer.js": {"overwrite": false, "hash": "2ed3d65420a29f0ecb3f78fe3302d113b0db05e663591ed800ff44dc92cd6f97"},
         "config/berserker.js": {"overwrite": false, "hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
         "config/brawler.js": {"overwrite": false, "hash": "0af0c21a24054308e1d834dda064951847124a902ecdd0fc49f9759a510f57dd"},
         "config/common.js": {"overwrite": false, "hash": "6a4ec7ef46e0763696c7aadc48eecda04ab46a142004f38b4df5eff87daa226b"},
