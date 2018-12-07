@@ -1,7 +1,7 @@
 {
     "files": {
         "index.js": "8c484c12502e4aa0b40108e07603965ea898b13e80ecfd38115329e53aca0887",
-        "module.json": "3826e7788afe145350a36762065f935bb83cb773517534d2c13a2911c5392120",
+        "module.json": "0ec2d630c81aa1f922a9772652fae3eb92f92e86e8c95971150caa80328e0c59",
         "lib/abnormal.js": "a5e9cf73b2cfd9ff5ea54e80c0ae189f352b3520692a2a177a3e96b0bf373e4a",
         "lib/cooldown.js": "cb15e1e771d3c940579c3c341f60a3036ee217ac0e941805bfc24d1d9e061c98",
         "lib/entity.js": "cd2f74c89052421a7419fa2f1255fe1c6817f306f2c7cd45256d9ce8c61f1753",

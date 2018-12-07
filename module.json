@@ -1,4 +1,11 @@
 {
     "disableAutoUpdate": false,
-	"servers": ["https://raw.githubusercontent.com/caali-hackerman/battle-notify/master/"]
+    "name": "battle-notify",
+    "author": "Caali / wuaw",
+    "description": "Shows text notifications on configurable in-game events",
+    "version": "1.0",
+    "servers": ["https://raw.githubusercontent.com/caali-hackerman/battle-notify/master/"],
+    "options": {
+        "niceName": "BattleNotify"
+    }
 }
