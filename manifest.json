@@ -1,11 +1,11 @@
 {
     "files": {
-        "index.js": "8c484c12502e4aa0b40108e07603965ea898b13e80ecfd38115329e53aca0887",
+        "index.js": "cbd0174cb5a51aa69ce1adab76070c51566ecab99200a5a4d6578ba0425ff922",
         "module.json": "0ec2d630c81aa1f922a9772652fae3eb92f92e86e8c95971150caa80328e0c59",
         "lib/abnormal.js": "a5e9cf73b2cfd9ff5ea54e80c0ae189f352b3520692a2a177a3e96b0bf373e4a",
-        "lib/cooldown.js": "cb15e1e771d3c940579c3c341f60a3036ee217ac0e941805bfc24d1d9e061c98",
+        "lib/cooldown.js": "071c54188be4d6e47c298cace34d563fd7d6ba2cf7b4a876f4f7d940187ce622",
         "lib/entity.js": "cd2f74c89052421a7419fa2f1255fe1c6817f306f2c7cd45256d9ce8c61f1753",
-        "lib/notify.js": "85d2ec7f8b0fe350f5023b579bc662783700f8fa6c3d52c5d25178734f5684f9",
+        "lib/notify.js": "e729cac18a15b9c506b0219ec214729a7b3c631e619c2ead27bf45a45b445318",
         "lib/party.js": "ff28e64cfe387a10e4fe461a46156153a7139cc5f11303502f93bc828284f493",
         "config/archer.js": {"overwrite": false, "hash": "2ed3d65420a29f0ecb3f78fe3302d113b0db05e663591ed800ff44dc92cd6f97"},
         "config/berserker.js": {"overwrite": false, "hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},

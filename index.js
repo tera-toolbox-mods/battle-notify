@@ -41,11 +41,11 @@ function tryRequire(path){
     }
 }
 
-function logError(message) {
-    console.error(Array.isArray(message) ? message.join('\n') : message)
-}
-
 module.exports = function BattleNotify(mod){
+    function logError(message) {
+        mod.error(Array.isArray(message) ? message.join('\n') : message)
+    }
+
     let enabled = false
     const abMan = new AbnormalManager(mod, debug)
     const cooldown = new CooldownManager(mod, debug)
@@ -69,7 +69,7 @@ module.exports = function BattleNotify(mod){
     mod.hook('S_PRIVATE_CHAT', 1, (event) => {
         if(!debug) return
         enabled = true
-        setTimeout(refreshConfig, 5)
+        mod.setTimeout(refreshConfig, 5)
     })
 
     function Conditions(){
@@ -132,7 +132,7 @@ module.exports = function BattleNotify(mod){
         }
 
         function CooldownConditions(){
-            
+
             function Expiring({timesToMatch} = {}){
                 this.timesToMatch = timesToMatch
                 return checkExpiring.bind(this)
@@ -368,10 +368,9 @@ module.exports = function BattleNotify(mod){
         if(!enabled) return
         events.forEach(e => e.check())
     }
-    const checkTimer = setInterval(checkEvents, 500)
-    this.destructor = function(){
-        clearInterval(checkTimer)
-    }
+
+    mod.setInterval(checkEvents, 500)
+
     if(debug) {
         mod.send('C_CHAT', 1, {"channel":11,"message":"<FONT></FONT>"})
 
