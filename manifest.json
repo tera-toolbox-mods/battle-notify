@@ -2,7 +2,7 @@
     "files": {
         "index.js": "fd634ca94b6887f55a470ab41b9978c386bc93c81ccb8bda938dd74e1c88c0dd",
         "module.json": "0ec2d630c81aa1f922a9772652fae3eb92f92e86e8c95971150caa80328e0c59",
-        "lib/abnormal.js": "a5e9cf73b2cfd9ff5ea54e80c0ae189f352b3520692a2a177a3e96b0bf373e4a",
+        "lib/abnormal.js": "6e1b13eedf803e440ea6f862d779de65a0045657e632a41de9d1fe9470ff5d8d",
         "lib/cooldown.js": "a856ca598616241f978022b89e121e39d96368476bcd8a2efce3c7cfe00319a8",
         "lib/entity.js": "cd2f74c89052421a7419fa2f1255fe1c6817f306f2c7cd45256d9ce8c61f1753",
         "lib/notify.js": "e729cac18a15b9c506b0219ec214729a7b3c631e619c2ead27bf45a45b445318",
@@ -42,7 +42,7 @@
         "S_SPAWN_USER": 13,
         "S_USER_STATUS": 2,
         "S_LOAD_TOPO": 3,
-        "S_ABNORMALITY_BEGIN": [2, 3],
+        "S_ABNORMALITY_BEGIN": 3,
         "S_ABNORMALITY_REFRESH": 1,
         "S_ABNORMALITY_END": 1,
         "S_START_COOLTIME_SKILL": 3,
