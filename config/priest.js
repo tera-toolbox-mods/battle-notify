@@ -25,13 +25,4 @@ module.exports = [
 		message: "Missing Power Buff",
 		rewarn_timeout: 10
 	},
-
-	// Balder
-	{
-		type: 'MissingDuringCombat',
-		target: 'Self',
-		abnormalities: [805600, 805601, 805602, 805603, 805604],
-		message: "Missing Endurance Buff",
-		rewarn_timeout: 10
-	},
 ]

@@ -16,7 +16,7 @@
         "config/lancer.js": {"overwrite": false, "hash": "079683843be8a2c2cfbe26c320fd94d0f4f687cc7490c15fb5abb96f8912a02d"},
         "config/mystic.js": {"overwrite": false, "hash": "6cfdba794bc90c5d0113e256c0d01df8f454481f9e5a3916bdd09b2b9561e32a"},
         "config/ninja.js": {"overwrite": false, "hash": "3164315f5636e74be4134cacdad3e22e8b0affe741c0d8762750bd7e307fac4b"},
-        "config/priest.js": {"overwrite": false, "hash": "160c1a8aacba72c957ccdc3e8b8eccc3f4461f41de37f4edb530a35e18dbc24f"},
+        "config/priest.js": {"overwrite": false, "hash": "73d270c169dd25fc59f02e0ae3e0883c048a69819a0c82efc42a1f9446915ba1"},
         "config/reaper.js": {"overwrite": false, "hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
         "config/slayer.js": {"overwrite": false, "hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
         "config/sorcerer.js": {"overwrite": false, "hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
