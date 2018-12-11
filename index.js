@@ -1,50 +1,51 @@
-const debug = false
-const AbnormalManager = tryRequire('./lib/abnormal')
-const CooldownManager = tryRequire('./lib/cooldown')
-const EntityManager = tryRequire('./lib/entity')
-const PartyManager = tryRequire('./lib/party')
-const Notify = tryRequire('./lib/notify')
-
-const isDefined = x => typeof x !== 'undefined'
-const isArray = x => x instanceof Array
-const isError = x => x instanceof Error
-const toArray = x => isArray(x) ? x : (isDefined(x) ? [x] : [])
-const toSet = x => new Set(toArray(x))
-const thisIfGreater = (x, y) => (x > y) ? x : false
-const thisIfSmaller = (x, y) => (x < y) ? x : false
-const skillGroup = x => Math.floor(x / 10000)
-const msRemaining = uts => uts - Date.now()
-const sRemaining = uts => Math.round(msRemaining(uts) / 1000)
-const matchExpiring = (set, uts) => set.has(sRemaining(uts))
-
-for (const lib of [AbnormalManager, CooldownManager, EntityManager, PartyManager, Notify]){
-    if(!lib) return
-}
-
-function tryIt(func) {
-    try {
-        return func()
-    } catch (e) {
-        return e
-    }
-}
-
-function tryRequire(path){
-    try {
-        delete require.cache[require.resolve(path)]
-        return require(path)
-    } catch (e) {
-        logError([
-            `[battle-notify] require: error loading (${path})`,
-            e.stack
-        ])
-    }
-}
-
 module.exports = function BattleNotify(mod){
+    const debug = false
+    const AbnormalManager = tryRequire('./lib/abnormal')
+    const CooldownManager = tryRequire('./lib/cooldown')
+    const EntityManager = tryRequire('./lib/entity')
+    const PartyManager = tryRequire('./lib/party')
+    const Notify = tryRequire('./lib/notify')
+
+    const isDefined = x => typeof x !== 'undefined'
+    const isArray = x => x instanceof Array
+    const isError = x => x instanceof Error
+    const toArray = x => isArray(x) ? x : (isDefined(x) ? [x] : [])
+    const toSet = x => new Set(toArray(x))
+    const thisIfGreater = (x, y) => (x > y) ? x : false
+    const thisIfSmaller = (x, y) => (x < y) ? x : false
+    const skillGroup = x => Math.floor(x / 10000)
+    const msRemaining = uts => uts - Date.now()
+    const sRemaining = uts => Math.round(msRemaining(uts) / 1000)
+    const matchExpiring = (set, uts) => set.has(sRemaining(uts))
+
+    for (const lib of [AbnormalManager, CooldownManager, EntityManager, PartyManager, Notify]){
+        if(!lib) return
+    }
+
+    function tryIt(func) {
+        try {
+            return func()
+        } catch (e) {
+            return e
+        }
+    }
+
+    function tryRequire(path){
+        try {
+            delete require.cache[require.resolve(path)]
+            return require(path)
+        } catch (e) {
+            logError([
+                `[battle-notify] require: error loading (${path})`,
+                e.stack
+            ])
+        }
+    }
+
     function logError(message) {
         mod.error(Array.isArray(message) ? message.join('\n') : message)
     }
+
 
     let enabled = false
     const abMan = new AbnormalManager(mod, debug)
