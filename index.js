@@ -60,7 +60,7 @@ module.exports = function BattleNotify(mod){
     const combat = () => entities.myEntity().combat
     const enrage = () => entities.myBoss().enraged
 
-    mod.hook('S_LOGIN', 10, (event) => {
+    mod.hook('S_LOGIN', 'raw', () => {
         enabled = true
         refreshConfig()
     })
