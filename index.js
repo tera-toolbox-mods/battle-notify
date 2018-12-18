@@ -1,4 +1,8 @@
 module.exports = function BattleNotify(mod){
+    if(mod.proxyAuthor !== 'caali')
+        mod.warn('You are trying to use BattleNotify on an unsupported version of tera-proxy. It may not work as expected, and even if it does now it may break at any point in the future!');
+
+
     const debug = false
     const AbnormalManager = tryRequire('./lib/abnormal')
     const CooldownManager = tryRequire('./lib/cooldown')
