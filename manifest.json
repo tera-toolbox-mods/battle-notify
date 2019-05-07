@@ -3,8 +3,8 @@
         "index.js": "cf015ddb39a20e3fcf055e27658e9db40198297413d69059554e7efa46d0e2c1",
         "module.json": "0ec2d630c81aa1f922a9772652fae3eb92f92e86e8c95971150caa80328e0c59",
         "lib/abnormal.js": "0bb9f19b750793ea9a5259c1bcc4e5bd3096ed27c5634c9b153538cde3e00b35",
-        "lib/cooldown.js": "152fdf71d15e56d11b0bc2fcc46a77b656ecf7f2a24fe32fb8b5b0a2234dece5",
-        "lib/entity.js": "66f513a46683722871e04156f1a179d354d3d521de7003f6b53a4e9675bed7ae",
+        "lib/cooldown.js": "51c7ba6c1b54f978f4ec299f76fd64c085b43ab77cb7e2b8da8c7497a06f6412",
+        "lib/entity.js": "fbe1e45423172d61e8035fc82308c8f83ecc0581beded7956dc9e504040f3062",
         "lib/notify.js": "e729cac18a15b9c506b0219ec214729a7b3c631e619c2ead27bf45a45b445318",
         "lib/party.js": "ff28e64cfe387a10e4fe461a46156153a7139cc5f11303502f93bc828284f493",
         "config/archer.js": {"overwrite": false, "hash": "2ed3d65420a29f0ecb3f78fe3302d113b0db05e663591ed800ff44dc92cd6f97"},
@@ -24,7 +24,7 @@
         "config/warrior.js": {"overwrite": false, "hash": "37e90aed3d5be988226d07135cad47f1ba57857316f8deac30221fc608698bdc"}
     },
     "defs": {
-        "S_LOGIN": ["raw", 12, 13],
+        "S_LOGIN": ["raw", 13],
         "S_PRIVATE_CHAT": 1,
         "C_CHAT": 1,
         "S_PARTY_MEMBER_LIST": 7,
