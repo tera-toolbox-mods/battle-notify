@@ -60,14 +60,14 @@ module.exports = function BattleNotify(mod){
     const combat = () => entities.myEntity().combat
     const enrage = () => entities.myBoss().enraged
 
-    mod.hook('S_LOGIN', 'raw', () => {
+    mod.hook('S_LOGIN', 'event', () => {
         enabled = true
         refreshConfig()
     })
-    mod.hook('S_RETURN_TO_LOBBY', 'raw', (data) => {
+    mod.hook('S_RETURN_TO_LOBBY', 'event', () => {
         enabled = false
     })
-    mod.hook('S_PRIVATE_CHAT', 1, (event) => {
+    mod.hook('S_PRIVATE_CHAT', 'event', () => {
         if(!debug) return
         enabled = true
         mod.setTimeout(refreshConfig, 5)

@@ -1,6 +1,6 @@
 {
     "files": {
-        "index.js": "4d32b75971248df833ef113d07c8682a61596758ba40263d2d0030c98e847077",
+        "index.js": "2019d95efe1e28691a546f5c25613780227a8cee805fd0e9f6d88dffafc283f6",
         "module.json": "157520744efcd91b6e0417eca45d159ed35efe366838054d5313b5b0fc63ddbb",
         "lib/abnormal.js": "0bb9f19b750793ea9a5259c1bcc4e5bd3096ed27c5634c9b153538cde3e00b35",
         "lib/cooldown.js": "51c7ba6c1b54f978f4ec299f76fd64c085b43ab77cb7e2b8da8c7497a06f6412",
@@ -25,7 +25,7 @@
     },
     "defs": {
         "S_LOGIN": ["raw", 13],
-        "S_PRIVATE_CHAT": 1,
+        "S_PRIVATE_CHAT": ["raw", 1],
         "C_CHAT": 1,
         "S_PARTY_MEMBER_LIST": 7,
         "S_LEAVE_PARTY_MEMBER": 2,
