@@ -1,4 +1,5 @@
 {
+    "disableAutoUpdate": false,
     "name": "battle-notify",
     "author": "Caali / wuaw",
     "description": "Shows text notifications on configurable in-game events",
