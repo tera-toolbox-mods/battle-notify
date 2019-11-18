@@ -1,6 +1,6 @@
 # battle-notify
 
-A [TERA Toolbox](https://github.com/tera-toolbox/tera-toolbox) module to show ingame text notifications on configurable events.
+A [TERA Toolbox](https://github.com/tera-toolbox/tera-toolbox) module to show ingame text notifications on configurable in-game events.
 Original mod by wuaw (https://github.com/wuaw/battle-notify).
 
 ## Preview
@@ -9,13 +9,13 @@ Original mod by wuaw (https://github.com/wuaw/battle-notify).
 
 ## Configuration
 
-The `config` folder contains all of the files necessary to customize the events that are shown.
+The `config` folder has all the files necessary to customize the events that are shown.
 
 ## Styling options
 
 The file `./config/common_styling.js` contains the default styling options that will be prepended to each event.
 
-These options can be overriden, per event, by using style tags in the `message` field of the event.
+These options may be overridden, per event, by using style tags in the `message` field of the event.
 
 This example shows the default style tags:
 ```
@@ -155,17 +155,17 @@ Please note! `Ready` type events will also be triggered by skill resets. There s
 
 The `skills` field for a skill reset event specifies the skill IDs that you would like to track.
 
-You can find a list of skills in the `skills` file for your region in the [TeraDpsMeterData](https://github.com/neowutran/TeraDpsMeterData/blob/master/skills/) repository. [Here](https://github.com/neowutran/TeraDpsMeterData/blob/master/skills/skills-NA.tsv) is a link to the list of skills for NA region. The leftmost column indicates the skill ID.
+You can find a list of skills in the `skills` file for your region in the [TeraDpsMeterData](https://github.com/neowutran/TeraDpsMeterData/tree/master/skills) repository. [Here](https://github.com/neowutran/TeraDpsMeterData/blob/master/skills/skills-NA.tsv) is a link to the list of skills for NA region. The leftmost column indicates the skill ID.
 
 You can specify a single skill ID `290100` or multiple skill IDs in an array `[290100, 370100]`.
 
-Skills trigger an event by their respective group, rather than the raw skill ID that you supply. So, `290100` would hook group `29`. This is done so that you do not need to supply the skill ID for each level of the skill. However, in some cases a skill has a different group in certain conditions (See warrior blade draw with & without deadly gamble buff, or slayer OHS with ICB). In these cases you must provide the base skill ID and the buffed skill ID, as shown above for warrior's blade draw.
+Skills trigger an event by their respective group, rather than the raw skill ID that you supply. So, `290100` would hook group `29`. This is done so that you do not need to supply the skill ID for each level of the skill. However, sometimes a skill has a different group in certain conditions (See warrior blade draw with & without deadly gamble buff, or slayer OHS with ICB). In these cases you must provide the base skill ID and the buffed skill ID, as shown above for warrior's blade draw.
 
 #### items
 
 The `items` field specifies the item ID(s) that you want to track.
 
-You can find a list of item IDs at this website, under `Database -> Items`: [TeraDatabase](http://teradatabase.net) (note: You should *not* use this site to obtain skill IDs. Only use this site for item IDs).
+You can find a list of item IDs at this website, under `Database -> Items`: [TeraLore](https://teralore.com/us) (note: You should *not* use this site to get skill IDs. Only use this site for item IDs).
 
 You can specify a single item ID `98267` or multiple item IDs in an array `[98267, 98260]`.
 

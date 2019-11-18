@@ -95,6 +95,43 @@ module.exports = [
 		abnormalities: [200701, 200700],
 		message: 'Adrenaline Rush Ended'
 	},
+	// Mystic Shield Added (Thrall)
+	{
+		type: 'added',
+		target: 'Self',
+		abnormalities: [702001],
+		message: 'Mysitc Shield up'
+	},
+	// Priest Shield Added (Kaia)
+	{
+		type: 'added',
+		target: 'Self',
+		abnormalities: [800300, 800302, 800303, 800304],
+		message: 'Priest Shield up.'
+	},
+	// Mystic Wrath Added
+	{
+		type: 'added',
+		target: 'Self',
+		abnormalities: [702004],
+		message: '{icon} {duration}'
+	},
+	// Priest Edict Added
+	{
+		type: 'added',
+		target: 'Self',
+		abnormalities: [805800],
+		message: '{icon} {duration}'
+	},
+
+	//Pet buff
+	{
+		type: 'expiring',
+		target: 'Self',
+		abnormalities: [13000, 13001, 13002, 13003, 13004, 13005, 13006, 13007, 13008, 13009, 13010, 13011, 13012, 13013, 13014, 13015, 13016, 13017, 13018, 13019, 13020, 13021, 13022, 13023, 13024, 13025, 13026, 13027, 13028, 13029, 13030, 13031, 13032, 13033, 13034, 13035, 13036, 13037],
+		message: 'Pet bond skill is about to expire.',
+		time_remaining: 5
+	},
 */
 
 	// Missing Battle Solution / Nostrum
@@ -121,6 +158,14 @@ module.exports = [
 		target: 'PartyIncludingSelf',
 		abnormalities: 950023,
 		message: '{name}\'s stacks expired'
+	},
+
+	// Bahaar Laser
+	{
+		type: 'added',
+		target: 'Self',
+		abnormalities: 90442502,
+		message: 'LASER!'
 	},
 */
 ]
