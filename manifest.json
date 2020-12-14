@@ -1,58 +1,75 @@
 {
-    "files": {
-        "README.md": "0610e675e5cbf55d7c392a397956b709297ea9f6423089d63c78a50d05f2863a",
-        "config/archer.js": {"overwrite": false, "hash":"105d1e7be0d998ab4ebc215198d635608b035312f76d4d89ebf95587128beccd"},
-        "config/berserker.js": {"overwrite": false, "hash":"3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
-        "config/brawler.js": {"overwrite": false, "hash":"373789b6984c2bcfc25092620111880ed68b4805f6fa4724da802a1eef3cf61e"},
-        "config/common.js": {"overwrite": false, "hash":"297b66b4ebe62bc8661d55cbf355a2f3fe7eb420d8a2bc2b7f37cf55c5d070ba"},
-        "config/common_styling.js": {"overwrite": false, "hash":"8a24e8fe632820d201155741b612b78df7a6f4d00160a3db8576f93542a191c3"},
-        "config/gunner.js": {"overwrite": false, "hash":"3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
-        "config/lancer.js": {"overwrite": false, "hash":"079683843be8a2c2cfbe26c320fd94d0f4f687cc7490c15fb5abb96f8912a02d"},
-        "config/mystic.js": {"overwrite": false, "hash":"6cfdba794bc90c5d0113e256c0d01df8f454481f9e5a3916bdd09b2b9561e32a"},
-        "config/ninja.js": {"overwrite": false, "hash":"3164315f5636e74be4134cacdad3e22e8b0affe741c0d8762750bd7e307fac4b"},
-        "config/priest.js": {"overwrite": false, "hash":"73d270c169dd25fc59f02e0ae3e0883c048a69819a0c82efc42a1f9446915ba1"},
-        "config/reaper.js": {"overwrite": false, "hash":"3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
-        "config/slayer.js": {"overwrite": false, "hash":"3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
-        "config/sorcerer.js": {"overwrite": false, "hash":"3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
-        "config/valkyrie.js": {"overwrite": false, "hash":"3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"},
-        "config/warrior.js": {"overwrite": false, "hash":"37e90aed3d5be988226d07135cad47f1ba57857316f8deac30221fc608698bdc"},
-        "index.js": "ab0e13dde21c5d2d2a5f1bb06923330d34871cbacd586c5dbb81916be6063ac8",
-        "lib/abnormal.js": "023e56bffbf372d8effc78eadea575bff08e3e9751235c16070cb7ee1efeb20c",
-        "lib/cooldown.js": "be1e8c8c45be32a743769b4d00b441c2a7973016c7bad699fd97c9c83caec14c",
-        "lib/entity.js": "85fe96d2bb08fdb1a3b36ca1aff122877e95becb332d3dfcca4ac6062f825e87",
-        "lib/notify.js": "6c7b8045f1af3ea293f31ea024773794fb0d0c4c3e1df02571c087f2d3af9de9",
-        "lib/party.js": "6472d41f623a93f3a3d5e76e22a85f8ade8cdba978f2ba667b836a7c9d455798",
-        "module.json": "180fd9049c56c504b4b07c97a0fef8ef57809f19c04beb736dfd6298eaccdd6b",
-        "previews/colors.jpg": "07dea37f507e6a92e7e7719ee728cfc0dee3cbc02466398063c68ba23ec90c5b",
-        "previews/missing.jpg": "386353893f17dc24d9cf0d7396c943fce7493f0a62a438db52ffb19955aa734e",
-        "previews/screenshot.png": "a9df41e538aa1eec005e286905f6578abd0cd2320e6d864a704bb491fc019d98"
-    },
-    "defs": {
-        "C_CHAT": 1,
-        "S_ABNORMALITY_BEGIN": 3,
-        "S_ABNORMALITY_END": 1,
-        "S_ABNORMALITY_REFRESH": 1,
-        "S_BOSS_GAGE_INFO": 3,
-        "S_CHAT": 3,
-        "S_CREATURE_CHANGE_HP": 6,
-        "S_CREATURE_LIFE": 3,
-        "S_CREST_MESSAGE": 2,
-        "S_DECREASE_COOLTIME_SKILL": 3,
-        "S_DESPAWN_NPC": 3,
-        "S_DUNGEON_EVENT_MESSAGE": 2,
-        "S_EACH_SKILL_RESULT": [13,14],
-        "S_LEAVE_PARTY": "event",
-        "S_LEAVE_PARTY_MEMBER": 2,
-        "S_LOAD_TOPO": ["event",3],
-        "S_LOGIN": ["event",13,14],
-        "S_NPC_STATUS": 2,
-        "S_PARTY_MEMBER_LIST": 7,
-        "S_PRIVATE_CHAT": ["event",1],
-        "S_RETURN_TO_LOBBY": "event",
-        "S_SPAWN_ME": 3,
-        "S_SPAWN_USER": 15,
-        "S_START_COOLTIME_ITEM": 1,
-        "S_START_COOLTIME_SKILL": 3,
-        "S_USER_STATUS": 3
-    }
+	"files": {
+		"README.md": "0610e675e5cbf55d7c392a397956b709297ea9f6423089d63c78a50d05f2863a",
+		"config/archer.js": {
+			"overwrite": false,
+			"hash": "105d1e7be0d998ab4ebc215198d635608b035312f76d4d89ebf95587128beccd"
+		},
+		"config/berserker.js": {
+			"overwrite": false,
+			"hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"
+		},
+		"config/brawler.js": {
+			"overwrite": false,
+			"hash": "373789b6984c2bcfc25092620111880ed68b4805f6fa4724da802a1eef3cf61e"
+		},
+		"config/common.js": {
+			"overwrite": false,
+			"hash": "297b66b4ebe62bc8661d55cbf355a2f3fe7eb420d8a2bc2b7f37cf55c5d070ba"
+		},
+		"config/common_styling.js": {
+			"overwrite": false,
+			"hash": "8a24e8fe632820d201155741b612b78df7a6f4d00160a3db8576f93542a191c3"
+		},
+		"config/gunner.js": {
+			"overwrite": false,
+			"hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"
+		},
+		"config/lancer.js": {
+			"overwrite": false,
+			"hash": "079683843be8a2c2cfbe26c320fd94d0f4f687cc7490c15fb5abb96f8912a02d"
+		},
+		"config/mystic.js": {
+			"overwrite": false,
+			"hash": "6cfdba794bc90c5d0113e256c0d01df8f454481f9e5a3916bdd09b2b9561e32a"
+		},
+		"config/ninja.js": {
+			"overwrite": false,
+			"hash": "3164315f5636e74be4134cacdad3e22e8b0affe741c0d8762750bd7e307fac4b"
+		},
+		"config/priest.js": {
+			"overwrite": false,
+			"hash": "73d270c169dd25fc59f02e0ae3e0883c048a69819a0c82efc42a1f9446915ba1"
+		},
+		"config/reaper.js": {
+			"overwrite": false,
+			"hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"
+		},
+		"config/slayer.js": {
+			"overwrite": false,
+			"hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"
+		},
+		"config/sorcerer.js": {
+			"overwrite": false,
+			"hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"
+		},
+		"config/valkyrie.js": {
+			"overwrite": false,
+			"hash": "3a5910661bd79b2a6b41d83a225b9d8556bdaa62d1991417e199efb7121b1276"
+		},
+		"config/warrior.js": {
+			"overwrite": false,
+			"hash": "37e90aed3d5be988226d07135cad47f1ba57857316f8deac30221fc608698bdc"
+		},
+		"index.js": "ab0e13dde21c5d2d2a5f1bb06923330d34871cbacd586c5dbb81916be6063ac8",
+		"lib/abnormal.js": "023e56bffbf372d8effc78eadea575bff08e3e9751235c16070cb7ee1efeb20c",
+		"lib/cooldown.js": "be1e8c8c45be32a743769b4d00b441c2a7973016c7bad699fd97c9c83caec14c",
+		"lib/entity.js": "2f1adb56077028c80b232d47629433074a601fa958e3e7f68c8b94cf6f1f0827",
+		"lib/notify.js": "6c7b8045f1af3ea293f31ea024773794fb0d0c4c3e1df02571c087f2d3af9de9",
+		"lib/party.js": "6472d41f623a93f3a3d5e76e22a85f8ade8cdba978f2ba667b836a7c9d455798",
+		"module.json": "180fd9049c56c504b4b07c97a0fef8ef57809f19c04beb736dfd6298eaccdd6b",
+		"previews/colors.jpg": "07dea37f507e6a92e7e7719ee728cfc0dee3cbc02466398063c68ba23ec90c5b",
+		"previews/missing.jpg": "386353893f17dc24d9cf0d7396c943fce7493f0a62a438db52ffb19955aa734e",
+		"previews/screenshot.png": "a9df41e538aa1eec005e286905f6578abd0cd2320e6d864a704bb491fc019d98"
+	}
 }
