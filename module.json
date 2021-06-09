@@ -7,5 +7,6 @@
     "options": {
         "cliName": "BattleNotify",
         "guiName": "BattleNotify"
-    }
+    },
+    "disableAutoUpdate": false
 }
