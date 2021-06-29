@@ -62,7 +62,7 @@
 			"hash": "37e90aed3d5be988226d07135cad47f1ba57857316f8deac30221fc608698bdc"
 		},
 		"index.js": "ab0e13dde21c5d2d2a5f1bb06923330d34871cbacd586c5dbb81916be6063ac8",
-		"lib/abnormal.js": "372b214c034be46a1334ad6925286d8048575b418a3d902a39be9a0fae80cddb",
+		"lib/abnormal.js": "1f99030d34db02bba255437b20e408f89245b455c3a6cdb10b932589e9f53d22",
 		"lib/cooldown.js": "be1e8c8c45be32a743769b4d00b441c2a7973016c7bad699fd97c9c83caec14c",
 		"lib/entity.js": "987b6bbadeec560cf5553bab22180a4c6271321177db12b7ae96ba68cb65b6fa",
 		"lib/notify.js": "6c7b8045f1af3ea293f31ea024773794fb0d0c4c3e1df02571c087f2d3af9de9",
