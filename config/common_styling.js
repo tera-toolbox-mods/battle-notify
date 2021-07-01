@@ -1,1 +1,1 @@
-module.exports = "{chat}{alert}{red}"
+module.exports = "{chat}{alert}{white}"

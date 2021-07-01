@@ -16,8 +16,11 @@ const toSet = x => new Set(toArray(x))
 const thisIfGreater = (x, y) => (x > y) ? x : false
 //const thisIfSmaller = (x, y) => (x < y) ? x : false
 //const skillGroup = x => Math.floor(x / 10000)
-const msRemaining = uts => uts - Date.now()
-const sRemaining = uts => Math.round(msRemaining(uts) / 1000)
+//const roundFractionalBigIntMs = (uts) => (uts / 1000n) + (uts < 0n ? ((uts % 1000n) <= -500n ? 1n : 0n) : (uts % 1000n >= 500n ? 1n : 0n))
+const ceilFractionalBigIntMs = (uts) => (uts / 1000n) + ((uts % 1000n) !== 0n ? 1n : 0n)
+const msRemaining = uts => typeof uts === 'bigint' ? (uts - BigInt(Date.now())) : (uts - Date.now())
+                                                    //Using Math.ceil is more accurate than rounding it, for bigInt durations. ~Ris
+const sRemaining = uts => typeof uts === 'bigint' ? ceilFractionalBigIntMs(msRemaining(uts)) : Math.round(msRemaining(uts) / 1000)
 const matchExpiring = (set, uts) => set.has(sRemaining(uts))
 
 function tryIt(func) {
@@ -34,11 +37,11 @@ function logError(message) {
 
 function BattleNotify(mod) {
 
-    const abMan = new AbnormalManager(mod)
+    const abMan = new AbnormalManager(mod, debug)
     const cooldown = new CooldownManager(mod)
     const entities = new EntityManager(mod, debug)
     const party = new PartyManager(mod)
-    const notify = new Notify(mod)
+    const notify = new Notify(mod, debug)
     const conditions = new Conditions()
     const targets = new Targets()
     const events = new Set()
@@ -89,9 +92,9 @@ function BattleNotify(mod) {
                 this.timesToMatch = timesToMatch
                 return checkExpiring.bind(this)
             }
-            function checkExpiring(lastMatch, { expires = 0, added, refreshed } = {}) {
+            function checkExpiring(lastMatch, { expires = 0n, added, refreshed } = {}) {
                 if (matchExpiring(this.timesToMatch, expires))
-                    return (refreshed || added) + sRemaining(expires)
+                    return (refreshed || added || 0n) + sRemaining(expires)
             }
 
             function Missing({ rewarnTimeout } = {}) {
@@ -195,7 +198,9 @@ function BattleNotify(mod) {
             this.myboss = () => [entities.myBossId()]
             this.party = () => party.members()
                 .filter(cid => cid !== entities.myCid())
+                .filter(cid => cid !== '0')
             this.partyincludingself = () => party.members()
+                .filter(cid => cid !== '0')
         }
         function CooldownTargets(skills, items) {
             skills = Array.from(skills)
@@ -212,9 +217,10 @@ function BattleNotify(mod) {
         const type = data.type.toLowerCase()
         const target = data.target.toLowerCase()
         const getTargets = targets.abnormal[target]
+        if (debug) console.log(`BN => [ABNORMALITY EVENT.getTargets] ${target} => ${JSON.stringify(getTargets(), (k, v) => typeof v === 'bigint' ? v.toString() : v)}`)
         const event = {}
         const args = event.args = {
-            timesToMatch: toSet(data.time_remaining || 6),
+            timesToMatch: toSet((isDefined(data.time_remaining) && data.time_remaining !== 0) ? (isArray(data.time_remaining) ? data.time_remaining.map(el => BigInt(el)) : BigInt(data.time_remaining)) : 6n),
             rewarnTimeout: data.rewarn_timeout || 5,
             requiredStacks: data.required_stacks || 1
         }
@@ -230,12 +236,13 @@ function BattleNotify(mod) {
                 .filter(isError)
                 .forEach(err => logError([
                     `[battle-notify] AbnormalEvent.check: error while checking event`,
-                    `event: ${JSON.stringify(event || {})}`,
+                    `event: ${JSON.stringify(event || {}, (k, v) => typeof v === 'bigint' ? `${v.toString()}n` : v)}`,
                     err.stack
                 ]))
         }
     }
     function checkAbnormalEvent(entityId, event) {
+        //if (debug) console.log(`BN => INTERVAL [ABNORMALITY checkAbnormalEvent] ${entityId} => ${JSON.stringify(event, (k, v) => typeof v === 'bigint' ? v.toString() : v)}`)
         if (!entityId) return
         const entity = entities.get(entityId)
         if (entity.dead) return
@@ -359,7 +366,7 @@ function BattleNotify(mod) {
     }
 
     if (debug) {
-        mod.send('C_CHAT', 1, { "channel": 11, "message": "<FONT></FONT>" })
+        //mod.send('C_CHAT', 1, { "channel": 11, "message": "<FONT></FONT>" })
 
         //notify.testColors()
     }
