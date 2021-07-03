@@ -16,12 +16,16 @@ const toSet = x => new Set(toArray(x))
 const thisIfGreater = (x, y) => (x > y) ? x : false
 //const thisIfSmaller = (x, y) => (x < y) ? x : false
 //const skillGroup = x => Math.floor(x / 10000)
+                                                    //Using Math.ceil is more accurate than rounding it, for bigInt durations.
 //const roundFractionalBigIntMs = (uts) => (uts / 1000n) + (uts < 0n ? ((uts % 1000n) <= -500n ? 1n : 0n) : (uts % 1000n >= 500n ? 1n : 0n))
 const ceilFractionalBigIntMs = (uts) => (uts / 1000n) + ((uts % 1000n) !== 0n ? 1n : 0n)
-const msRemaining = uts => typeof uts === 'bigint' ? (uts - BigInt(Date.now())) : (uts - Date.now())
-                                                    //Using Math.ceil is more accurate than rounding it, for bigInt durations. ~Ris
-const sRemaining = uts => typeof uts === 'bigint' ? ceilFractionalBigIntMs(msRemaining(uts)) : Math.round(msRemaining(uts) / 1000)
-const matchExpiring = (set, uts) => set.has(sRemaining(uts))
+const msRemainingBigInt = (uts, nowMs) => uts - BigInt(nowMs)
+const sRemainingBigInt = (uts, nowMs) => ceilFractionalBigIntMs(msRemainingBigInt(uts, nowMs))
+const matchExpiringBigInt = (set, uts, nowMs) => set.has(sRemainingBigInt(uts, nowMs))
+
+const msRemaining = (uts, nowMs) => uts - nowMs
+const sRemaining = (uts, nowMs) => Math.round(msRemaining(uts, nowMs) / 1000)
+const matchExpiring = (set, uts, nowMs) => set.has(sRemaining(uts, nowMs))
 
 function tryIt(func) {
     try {
@@ -93,8 +97,9 @@ function BattleNotify(mod) {
                 return checkExpiring.bind(this)
             }
             function checkExpiring(lastMatch, { expires = 0n, added, refreshed } = {}) {
-                if (matchExpiring(this.timesToMatch, expires))
-                    return (refreshed || added || 0n) + sRemaining(expires)
+                const nowMs = Date.now()
+                if (matchExpiringBigInt(this.timesToMatch, expires, nowMs))
+                    return (refreshed || added || 0n) + sRemainingBigInt(expires, nowMs)
             }
 
             function Missing({ rewarnTimeout } = {}) {
@@ -103,7 +108,8 @@ function BattleNotify(mod) {
             }
             function checkMissing(lastMatch, { added, refreshed } = {}) {
                 if (added || refreshed) return
-                return thisIfGreater(Date.now(), lastMatch + this.rewarnTimeout)
+                const nowMs = Date.now()
+                return thisIfGreater(nowMs, lastMatch + this.rewarnTimeout)
             }
 
             function MissingDuringCombat({ rewarnTimeout } = {}) {
@@ -112,7 +118,8 @@ function BattleNotify(mod) {
             }
             function checkMissingDuringCombat(lastMatch, { added, refreshed } = {}) {
                 if (added || refreshed || !combat()) return
-                return thisIfGreater(Date.now(), lastMatch + this.rewarnTimeout)
+                const nowMs = Date.now()
+                return thisIfGreater(nowMs, lastMatch + this.rewarnTimeout)
             }
 
             this.added = (x) => checkAdded
@@ -131,8 +138,9 @@ function BattleNotify(mod) {
                 return checkExpiring.bind(this)
             }
             function checkExpiring(lastMatch, { expires } = {}) {
-                if (matchExpiring(this.timesToMatch, expires))
-                    return expires - sRemaining(expires)
+                const nowMs = Date.now()
+                if (matchExpiring(this.timesToMatch, expires, nowMs))
+                    return expires - sRemaining(expires, nowMs)
             }
 
             function ExpiringDuringCombat({ timesToMatch } = {}) {
@@ -158,8 +166,9 @@ function BattleNotify(mod) {
                 return checkReady.bind(this)
             }
             function checkReady(lastMatch, { expires = 0 } = {}) {
-                if (Date.now() > expires)
-                    return thisIfGreater(Date.now(), lastMatch + this.rewarnTimeout)
+                const nowMs = Date.now()
+                if (nowMs > expires)
+                    return thisIfGreater(nowMs, lastMatch + this.rewarnTimeout)
             }
 
             function ReadyDuringCombat({ rewarnTimeout } = {}) {
