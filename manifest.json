@@ -61,11 +61,15 @@
 			"overwrite": false,
 			"hash": "37e90aed3d5be988226d07135cad47f1ba57857316f8deac30221fc608698bdc"
 		},
+		"config/notify_config.js": {
+			"overwrite": false,
+			"hash": "596d7fa9b7e3034ae8de313d2b43bd18f690e71683be392770fda22ddfb06700"
+		},
 		"index.js": "2ea2d0632270c5c2ba37a9e429371be41b169e5810b2b1a3941201ec4654bd9d",
 		"lib/abnormal.js": "44b0274f378967d731cbacce9a239a49356e2e6c30cedfc606707f1afba6edc5",
 		"lib/cooldown.js": "be1e8c8c45be32a743769b4d00b441c2a7973016c7bad699fd97c9c83caec14c",
 		"lib/entity.js": "6c26787734afc3e7d3c49ae2db8ed2806c7ef689fc1475295fb35a5785328a3b",
-		"lib/notify.js": "83a6f743116ce6cc226a151f559e1301cc1208e088c6c5a50f3079a33cb2671e",
+		"lib/notify.js": "8080858196dbe797f335b71a03120e3be626c1fcb4d61a9ac38e893c3288bf70",
 		"lib/party.js": "079f738b7f66342b1401194be2063e826398386a798ce8f372c3ea6497ccf886",
 		"module.json": "eb5a24a98f8ce9ab90d3335094af78a39ff9731165433957ba8c2c240d87f984",
 		"previews/colors.jpg": "07dea37f507e6a92e7e7719ee728cfc0dee3cbc02466398063c68ba23ec90c5b",
