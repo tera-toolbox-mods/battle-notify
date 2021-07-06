@@ -103,23 +103,23 @@ function BattleNotify(mod) {
             }
 
             function Missing({ rewarnTimeout } = {}) {
-                this.rewarnTimeout = rewarnTimeout * 1000
+                this.rewarnTimeout = rewarnTimeout * 1000n
                 return checkMissing.bind(this)
             }
             function checkMissing(lastMatch, { added, refreshed } = {}) {
                 if (added || refreshed) return
                 const nowMs = Date.now()
-                return thisIfGreater(nowMs, lastMatch + this.rewarnTimeout)
+                return thisIfGreater(BigInt(nowMs), lastMatch + this.rewarnTimeout)
             }
 
             function MissingDuringCombat({ rewarnTimeout } = {}) {
-                this.rewarnTimeout = rewarnTimeout * 1000
+                this.rewarnTimeout = rewarnTimeout * 1000n
                 return checkMissingDuringCombat.bind(this)
             }
             function checkMissingDuringCombat(lastMatch, { added, refreshed } = {}) {
                 if (added || refreshed || !combat()) return
                 const nowMs = Date.now()
-                return thisIfGreater(nowMs, lastMatch + this.rewarnTimeout)
+                return thisIfGreater(BigInt(nowMs), lastMatch + this.rewarnTimeout)
             }
 
             this.added = (x) => checkAdded
@@ -230,7 +230,7 @@ function BattleNotify(mod) {
         const event = {}
         const args = event.args = {
             timesToMatch: toSet((isDefined(data.time_remaining) && data.time_remaining !== 0) ? (isArray(data.time_remaining) ? data.time_remaining.map(el => BigInt(el)) : BigInt(data.time_remaining)) : 6n),
-            rewarnTimeout: data.rewarn_timeout || 5,
+            rewarnTimeout: ((isDefined(data.rewarn_timeout) && data.rewarn_timeout !== 0) ? BigInt(data.rewarn_timeout) : 5n),
             requiredStacks: data.required_stacks || 1
         }
         event.abnormalities = toSet(data.abnormalities)
@@ -258,11 +258,11 @@ function BattleNotify(mod) {
 
         entityId = entityId.toString()
         if (!event.lastMatches.has(entityId))
-            event.lastMatches.set(entityId, 0)
+            event.lastMatches.set(entityId, 0n)
 
         const results = new Set()
         let info
-        let currentMatch
+        let currentMatch = 0n
 
         for (const abnormal of event.abnormalities) {
             const lastMatch = event.lastMatches.get(entityId)
