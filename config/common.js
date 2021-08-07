@@ -163,9 +163,49 @@ module.exports = [
 	// Bahaar Laser
 	{
 		type: 'added',
-		target: 'Self',
+		target: 'PartyIncludingSelf',
 		abnormalities: 90442502,
-		message: 'LASER!'
+		message: 'LASER on {name}!'
+	},
+
+	// SoH; Sea Stun
+	{
+		type: 'added',
+		target: 'PartyIncludingSelf',
+		abnormalities: 30209101,
+		message: 'Stun DoT inc on {name}!'
+	},
+
+	// SoH; Sea Fear
+	{
+		type: 'added',
+		target: 'PartyIncludingSelf',
+		abnormalities: 30209102,
+		message: 'Fear wave inc on {name}!'
+	},
+
+	// CKG; Garden Target
+	{
+		type: 'added',
+		target: 'PartyIncludingSelf',
+		abnormalities: 32060024,
+		message: '{icon} on {name}'
+	},
+
+	// CKG; Lumikan Immunity
+	{
+		type: 'added',
+		target: 'Self',
+		abnormalities: [31040003, 32040003],
+		message: '{icon} {duration}'
+	},
+
+	// CKG; Lumikan HM Target
+	{
+		type: 'added',
+		target: 'PartyIncludingSelf',
+		abnormalities: 32040007,
+		message: '{icon} on {name}'
 	},
 */
 ]
