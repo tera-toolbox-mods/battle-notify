@@ -1,12 +1,12 @@
 {
-    "disableAutoUpdate": false,
-    "name": "battle-notify",
-    "author": "Caali / wuaw",
-    "description": "Shows text notifications on configurable in-game events",
-    "version": "1.0",
-    "servers": ["https://raw.githubusercontent.com/tera-toolbox-mods/battle-notify/master/"],
-    "options": {
-        "cliName": "BattleNotify",
-        "guiName": "BattleNotify"
-    }
+	"disableAutoUpdate": false,
+	"name": "battle-notify",
+	"author": "Caali / wuaw",
+	"description": "Shows text notifications on configurable in-game events",
+	"version": "1.0",
+	"servers": ["https://raw.githubusercontent.com/tera-toolbox-mods/battle-notify/master/"],
+	"options": {
+		"cliName": "BattleNotify",
+		"guiName": "BattleNotify"
+	}
 }
