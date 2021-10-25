@@ -64,10 +64,10 @@
 		"index.js": "71b55ef2c64b59a7fc95003ffb8f247b00d58859d4655a9791442bb8a6689c88",
 		"lib/abnormal.js": "2819441825e14f9fb22b18d216e2b79e9af8b8d4dd046c7933d189977deb6e91",
 		"lib/cooldown.js": "be1e8c8c45be32a743769b4d00b441c2a7973016c7bad699fd97c9c83caec14c",
-		"lib/entity.js": "b02d71b1780a29dea7376a218ab57a10fd88caeabd394b0509ee1463dd5a9002",
+		"lib/entity.js": "35f554c52011285c52d1e964a210f6342a3d6ad8288ee7abca5c455d8dcb5cd2",
 		"lib/notify.js": "8c2cb7d7d69f52a2f4c500ff7a2d33aacc264c296ac591508336692fee314438",
 		"lib/party.js": "079f738b7f66342b1401194be2063e826398386a798ce8f372c3ea6497ccf886",
-		"module.json": "eb5a24a98f8ce9ab90d3335094af78a39ff9731165433957ba8c2c240d87f984",
+		"module.json": "afdf3ac57bdedd8a911dbaec5bd8627c7d7dc7de421d6dccdadf2d844b42df3d",
 		"previews/colors.jpg": "07dea37f507e6a92e7e7719ee728cfc0dee3cbc02466398063c68ba23ec90c5b",
 		"previews/missing.jpg": "386353893f17dc24d9cf0d7396c943fce7493f0a62a438db52ffb19955aa734e",
 		"previews/screenshot.png": "a9df41e538aa1eec005e286905f6578abd0cd2320e6d864a704bb491fc019d98"
